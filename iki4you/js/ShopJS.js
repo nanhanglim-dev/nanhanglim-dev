@@ -1,22 +1,22 @@
-function checkLC {
+function checkLC() {
   if (letsCelebrate == "undefined") {
     location.replace("/curate");
   }
 }
 
-function checkPMU {
+function checkPMU() {
   if (pickMeUp == "undefined") {
     location.replace("/curate-2");
   }
 }
 
-function checkBYC {
+function checkBYC() {
   if (bespokeYourContents == "undefined") {
     location.replace("/curate-3");
   }
 }
 
-function checkAFT {
+function checkAFT() {
   if (addFinalTouch == "undefined") {
     location.replace("/curate-4");
   }
@@ -28,7 +28,7 @@ function getCurateParameter() {
   var letsCelebrate = parameter
 }
 
-function getPMU {
+function getPMU() {
   if (document.getElementById("pmuPetite").checked == "false" && document.getElementById("pmuRegular").checked == "false" && document.getElementById("pmuDeluxe").checked == "false") {
     document.getElementById('boxSelectText').style.display = "block";
   } else if (document.getElementById("pmuPetite").checked == "true";) {
@@ -40,7 +40,7 @@ function getPMU {
   }
 }
 
-function getBYC {
+function getBYC() {
   var bycName = document.getElementById("bycRName").value;
   var bycAbout = document.getElementById("bycAbout").value;
   var bycRTel = document.getElementById("bycRTel").value;
@@ -58,7 +58,7 @@ function getBYC {
   }
 }
 
-function getAFT {
+function getAFT() {
   if (document.getElementById("aftLIS").checked == "false" && document.getElementById("aftHALD").checked == "false" && document.getElementById("aftHV").checked == "false" && document.getElementById("aftTAARTS").checked == "false" && document.getElementById("aftIYB").checked == "false" && document.getElementById("aftBon").checked == "false" && document.getElementById("aftTY").checked == "false") {
     document.getElementById('msgSelectText').style.display = "block";
   } else if (document.getElementById("aftLIS").checked == "true";) {
@@ -96,7 +96,7 @@ if (document.getElementById("aftBeads").checked == "true") {
   document.getElementById('beadsLettering').style.display = "none";
 }
 
-function curateASurpriseIkiBox {
+function curateASurpriseIkiBox() {
   if (aftLook == "undefined") {
     location.replace(/curate);
   } else {
