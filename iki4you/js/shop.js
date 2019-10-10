@@ -113,4 +113,7 @@ function curateASurpriseIkiBox() {
   document.getElementById("cardmessage").value = sessionStorage.getItem('aftMessage');
   document.getElementById("look").value = sessionStorage.getItem('aftLook');
   document.getElementById("beadstext").value = sessionStorage.getItem('beadsLettering');
+  if (document.getElementById("look") !== "") {
+    document.querySelector('button[type="submit"]').click();
+  }
 }
