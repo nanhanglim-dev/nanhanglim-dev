@@ -43,6 +43,7 @@ function getBYC() {
   } else if (document.getElementById("pmu6PM10PM").checked == true) {
     sessionStorage.setItem('bycTime', "6PM-10PM");
   }
+  location.replace("/curate-4");
 }
 
 function getAFT() {
@@ -77,6 +78,7 @@ function getAFT() {
     var beadsLettering = document.getElementById("beadsLettering").value;
     sessionStorage.setItem('beadsLettering', beadsLettering);
   }
+  location.replace("/curate-5");
 }
 
 function beadsChecked() {
