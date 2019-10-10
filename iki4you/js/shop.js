@@ -68,7 +68,7 @@ function getAFT() {
   var aftMessage = document.getElementById("aftMessage").value
   sessionStorage.setItem('aftMessage', aftMessage);
   if (document.getElementById("aftRustic").checked == false && document.getElementById("aftClassic").checked == false) {
-    document.getElementById('timeSelectText').style.display = "block";
+    document.getElementById('lookSelectText').style.display = "block";
   } else if (document.getElementById("aftRustic").checked == true) {
     sessionStorage.setItem('aftLook', "Rustic");
     location.replace("/curate-5");
