@@ -56,7 +56,7 @@ function getAFT() {
     sessionStorage.setItem('aftDesign', "Have a lovely day");
   } else if (document.getElementById("aftHV").checked == true) {
     sessionStorage.setItem('aftDesign', "Happy vibes");
-  } else if (document.getElementById("aftTARRTS").checked == true) {
+  } else if (document.getElementById("aftTAARTS").checked == true) {
     sessionStorage.setItem('aftDesign', "There\'s always a reason to smile");
   } else if (document.getElementById("aftIYB").checked == true) {
     sessionStorage.setItem('aftDesign', "It\'s your birthday");
