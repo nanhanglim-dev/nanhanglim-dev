@@ -49,7 +49,7 @@ function getBYC() {
 
 function getAFT() {
   if (document.getElementById("aftLIS").checked == false && document.getElementById("aftHALD").checked == false && document.getElementById("aftHV").checked == false && document.getElementById("aftTAARTS").checked == false && document.getElementById("aftIYB").checked == false && document.getElementById("aftBon").checked == false && document.getElementById("aftTY").checked == false) {
-    document.getElementById('msgSelectText').style.display = "block";
+    document.getElementById('cardSelectText').style.display = "block";
   } else if (document.getElementById("aftLIS").checked == true) {
     sessionStorage.setItem('aftDesign', "Let it sparkle");
   } else if (document.getElementById("aftHALD").checked == true) {
