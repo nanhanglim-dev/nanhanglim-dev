@@ -77,9 +77,12 @@ function getAFT() {
     location.replace("/curate-5");
   }
   if (document.getElementById("aftBeads").checked == true) {
+    document.getElementById("checkedBeads").style.display = "block";
     document.getElementById("beadsLettering").required = "";
     var beadsLettering = document.getElementById("beadsLettering").value;
     sessionStorage.setItem('beadsLettering', beadsLettering);
+  } else {
+    document.getElementById("checkedBeads").style.display = "none";
   }
 }
 
