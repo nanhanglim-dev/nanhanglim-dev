@@ -38,7 +38,7 @@ function getBYC() {
   sessionStorage.setItem('bycDDate', bycDDate);
   if (document.getElementById("byc10AM6PM").checked == false && document.getElementById("byc6PM10PM").checked == false) {
     document.getElementById('timeSelectText').style.display = "block";
-  } else if (document.getElementById("pmu10AM6PM").checked == true) {
+  } else if (document.getElementById("byc10AM6PM").checked == true) {
     sessionStorage.setItem('bycTime', "10AM-6PM");
     location.replace("/curate-4");
   } else {
