@@ -40,7 +40,7 @@ function getBYC() {
     document.getElementById('timeSelectText').style.display = "block";
   } else if (document.getElementById("pmu10AM6PM").checked == true) {
     sessionStorage.setItem('bycTime', "10AM-6PM");
-  } else if (document.getElementById("pmu6PM10PM").checked == true) {
+  } else {
     sessionStorage.setItem('bycTime', "6PM-10PM");
   }
   location.replace("/curate-4");
@@ -61,7 +61,7 @@ function getAFT() {
     sessionStorage.setItem('aftDesign', "It\'s your birthday");
   } else if (document.getElementById("aftBon").checked == true) {
     sessionStorage.setItem('aftDesign', "Bonjour");
-  } else if (document.getElementById("aftTY").checked == true) {
+  } else {
     sessionStorage.setItem('aftDesign', "Thank you");
   }
   var aftMessage = document.getElementById("aftMessage").value
@@ -70,7 +70,7 @@ function getAFT() {
     document.getElementById('timeSelectText').style.display = "block";
   } else if (document.getElementById("aftRustic").checked == true) {
     sessionStorage.setItem('aftLook', "Rustic");
-  } else if (document.getElementById("aftClassic").checked == true) {
+  } else {
     sessionStorage.setItem('aftLook', "Classic");
   }
   if (document.getElementById("aftBeads").checked == true) {
