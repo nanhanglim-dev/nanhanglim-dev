@@ -1,3 +1,5 @@
+/* project i v1.0.1 | (c) 2019 Nan Hang Lim (@nanhanglim)  */
+
 function getCurateParameter() {
   var params = new URLSearchParams(document.location.search.substring(1));
   var parameter = params.get("celebrate");
