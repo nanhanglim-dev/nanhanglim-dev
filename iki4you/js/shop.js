@@ -90,3 +90,26 @@ function beadsChecked() {
     document.getElementById('checkedBeads').style.display = "none";
     }
 }
+
+function curateASurpriseIkiBox() {
+  document.getElementById("pick-me-up").value = sessionStorage.getItem('pickMeUp');
+  document.getElementById("express-shipping").value = sessionStorage.getItem('expressShipping');
+  if (sessionStorage.getItem('beadsLettering') !== null) {
+    document.getElementById("alphabet-beads").value = "Yes";
+  } else {
+    document.getElementById("alphabet-beads").value = "No";
+  }
+  document.getElementById("letscelebrate").value = sessionStorage.getItem('letsCelebrate');
+  document.getElementById("recipientname").value = sessionStorage.getItem('bycName');
+  document.getElementById("recipientphone").value = sessionStorage.getItem('bycRTel');
+  document.getElementById("addressline1").value = sessionStorage.getItem('bycAddress1');
+  document.getElementById("addressline2").value = sessionStorage.getItem('bycAddress2');
+  document.getElementById("country").value = sessionStorage.getItem('bycCountry');
+  document.getElementById("letscelebrate").value = sessionStorage.getItem('letsCelebrate');
+  document.getElementById("postalcode").value = sessionStorage.getItem('bycPostcode');
+  document.getElementById("deliverydate").value = sessionStorage.getItem('bycDDate');
+  document.getElementById("deliverytime").value = sessionStorage.getItem('bycTime');
+  document.getElementById("carddesign").value = sessionStorage.getItem('aftDesign');
+  document.getElementById("look").value = sessionStorage.getItem('aftLook');
+  document.getElementById("beadstext").value = sessionStorage.getItem('beadsLettering');
+}
