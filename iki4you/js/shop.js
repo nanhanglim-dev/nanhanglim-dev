@@ -40,10 +40,11 @@ function getBYC() {
     document.getElementById('timeSelectText').style.display = "block";
   } else if (document.getElementById("pmu10AM6PM").checked == true) {
     sessionStorage.setItem('bycTime', "10AM-6PM");
+    location.replace("/curate-4");
   } else {
     sessionStorage.setItem('bycTime', "6PM-10PM");
+    location.replace("/curate-4");
   }
-  location.replace("/curate-4");
 }
 
 function getAFT() {
@@ -70,15 +71,16 @@ function getAFT() {
     document.getElementById('timeSelectText').style.display = "block";
   } else if (document.getElementById("aftRustic").checked == true) {
     sessionStorage.setItem('aftLook', "Rustic");
+    location.replace("/curate-5");
   } else {
     sessionStorage.setItem('aftLook', "Classic");
+    location.replace("/curate-5");
   }
   if (document.getElementById("aftBeads").checked == true) {
     document.getElementById("beadsLettering").required = "";
     var beadsLettering = document.getElementById("beadsLettering").value;
     sessionStorage.setItem('beadsLettering', beadsLettering);
   }
-  location.replace("/curate-5");
 }
 
 function beadsChecked() {
