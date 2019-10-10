@@ -110,6 +110,7 @@ function curateASurpriseIkiBox() {
   document.getElementById("deliverydate").value = sessionStorage.getItem('bycDDate');
   document.getElementById("deliverytime").value = sessionStorage.getItem('bycTime');
   document.getElementById("carddesign").value = sessionStorage.getItem('aftDesign');
+  document.getElementById("cardmessage").value = sessionStorage.getItem('aftMessage');
   document.getElementById("look").value = sessionStorage.getItem('aftLook');
   document.getElementById("beadstext").value = sessionStorage.getItem('beadsLettering');
 }
