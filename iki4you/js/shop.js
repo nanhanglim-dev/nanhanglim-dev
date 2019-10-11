@@ -1,4 +1,4 @@
-/* project i v1.0.2 | (c) 2019 Nan Hang Lim (@nanhanglim)  */
+/* project i v1.0.3 | (c) 2019 Nan Hang Lim (@nanhanglim)  */
 
 function getCurateParameter() {
   var params = new URLSearchParams(document.location.search.substring(1));
@@ -119,3 +119,19 @@ function curateASurpriseIkiBox() {
     document.querySelector('button[type="submit"]').click();
   }
 }
+
+document.getElementById("pmu").addEventListener("onchange", function(){
+  document.getElementById("boxSelectText").display = "none";
+});
+
+document.getElementById("bycTime").addEventListener("onchange", function(){
+  document.getElementById("boxSelectText").display = "none";
+});
+
+document.getElementById("aft").addEventListener("onchange", function(){
+  document.getElementById("boxSelectText").display = "none";
+});
+
+document.getElementById("aftPackage").addEventListener("onchange", function(){
+  document.getElementById("boxSelectText").display = "none";
+});
