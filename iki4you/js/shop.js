@@ -1,4 +1,4 @@
-/* project i v1.0.4 | (c) 2019 Nan Hang Lim (@nanhanglim)  */
+/* project i v1.0.5 | (c) 2019 Nan Hang Lim (@nanhanglim)  */
 
 function getCurateParameter() {
   var params = new URLSearchParams(document.location.search.substring(1));
@@ -119,18 +119,19 @@ function curateASurpriseIkiBox() {
     document.querySelector('button[type="submit"]').click();
   }
 }
-function offBST() {
+
+document.getElementById("pmu").addEventListener("onchange", function(){
   document.getElementById("boxSelectText").style.display = "none";
-}
+});
 
-function offTST() {
-  document.getElementById("timeSelectText").style.display = "none";
-}
+document.getElementById("bycTime").addEventListener("onchange", function(){
+  document.getElementById("boxSelectText").style.display = "none";
+});
 
-function offCST() {
-  document.getElementById("cardSelectText").style.display = "none";
-}
+document.getElementById("aft").addEventListener("onchange", function(){
+  document.getElementById("boxSelectText").style.display = "none";
+});
 
-function offLST() {
-  document.getElementById("lookSelectText").style.display = "none";
-}
+document.getElementById("aftPackage").addEventListener("onchange", function(){
+  document.getElementById("boxSelectText").style.display = "none";
+});
