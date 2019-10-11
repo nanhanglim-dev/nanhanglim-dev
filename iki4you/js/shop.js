@@ -120,17 +120,17 @@ function curateASurpriseIkiBox() {
   }
 }
 function offBST() {
-  document.getElementById("boxSelectText").display = "none";
+  document.getElementById("boxSelectText").style.display = "none";
 }
 
 function offTST() {
-  document.getElementById("timeSelectText").display = "none";
+  document.getElementById("timeSelectText").style.display = "none";
 }
 
 function offCST() {
-  document.getElementById("cardSelectText").display = "none";
+  document.getElementById("cardSelectText").style.display = "none";
 }
 
 function offLST() {
-  document.getElementById("lookSelectText").display = "none";
+  document.getElementById("lookSelectText").style.display = "none";
 }
