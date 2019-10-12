@@ -1,4 +1,4 @@
-/* project i v1.0.7 | (c) 2019 Nan Hang Lim (@nanhanglim)  */
+/* project i v1.0.6 | (c) 2019 Nan Hang Lim (@nanhanglim)  */
 
 function getCurateParameter() {
   var params = new URLSearchParams(document.location.search.substring(1));
@@ -22,56 +22,23 @@ function getPMU() {
 }
 
 function getBYC() {
-  if (document.getElementById("bycRName").value == "") {
-    document.getElementById("nameRequired").style.display = "none";
-  } else {
   var bycName = document.getElementById("bycRName").value;
   localStorage.setItem('bycName', bycName);
-}
-
-  if (document.getElementById("bycAbout").value == "") {
-    else {
   var bycAbout = document.getElementById("bycAbout").value;
   localStorage.setItem('bycAbout', bycAbout);
-}
-
-  if (document.getElementById("bycRTel").value == "") {
-    else {
   var bycRTel = document.getElementById("bycRTel").value;
   localStorage.setItem('bycRTel', bycRTel);
-}
-
-  if (document.getElementById("bycAddress1").value == "") {
-    else {
   var bycAddress1 = document.getElementById("bycAddress1").value;
   localStorage.setItem('bycAddress1', bycAddress1);
-}
-
-  if (document.getElementById("bycAddress2").value == "") {
-    else {
   var bycAddress2 = document.getElementById("bycAddress2").value;
   localStorage.setItem('bycAddress2', bycAddress2);
-}
-
-  if (document.getElementById("bycCountry").value == "") {
-    else {
   var bycCountry = document.getElementById("bycCountry").value;
   localStorage.setItem('bycCountry', bycCountry);
-}
-
-  if (document.getElementById("bycPostcode").value == "") {
-    else {
   var bycPostcode = document.getElementById("bycPostcode").value;
   localStorage.setItem('bycPostcode', bycPostcode);
-}
-
-  if (document.getElementById("bycDDate").value == "") {
-    else {
   var bycDDate = document.getElementById("bycDDate").value;
   localStorage.setItem('bycDDate', bycDDate);
-}
-
-  if (document.getElementById("byc10AM6PM").checkeif (document.getElementById("bycAbout").value == "") {d == false && document.getElementById("byc6PM10PM").checked == false) {
+  if (document.getElementById("byc10AM6PM").checked == false && document.getElementById("byc6PM10PM").checked == false) {
     document.getElementById('timeSelectText').style.display = "block";
   } else if (document.getElementById("byc10AM6PM").checked == true) {
     localStorage.setItem('bycTime', "10AM-6PM");
