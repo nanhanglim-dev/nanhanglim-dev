@@ -73,7 +73,7 @@ function getAFT() {
     document.getElementById('lookSelectText').style.display = "block";
   } else if (document.getElementById("aftRustic").checked == true) {
     localStorage.setItem('aftLook', "Rustic");
-  } else {
+  } else if (document.getElementById("aftClassic").checked == true) {
     localStorage.setItem('aftLook', "Classic");
   }
   if (document.getElementById("aftBeads").checked == true) {
@@ -82,9 +82,16 @@ function getAFT() {
     localStorage.setItem('beadsLettering', beadsLettering);
   } else {
     document.getElementById("beadsLettering").required = false;
-    location.replace("/curate-5");
 }
 }
+
+if (document.getElementById("aftBeads").checked == true && document.getElementByID("beadsLettering").value !== "") {
+  location.replace("/curate-5");
+} else if (document.getElementById("aftBeads").checked == false) {
+  location.replace("/curate-5");
+} else {
+  return false;
+  
 
 function beadsChecked() {
   if (document.getElementById("aftBeads").checked == true) {
