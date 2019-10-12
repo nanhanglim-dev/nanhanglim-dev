@@ -1,4 +1,4 @@
-/* project i v1.0.10 | (c) 2019 Nan Hang Lim (@nanhanglim)  */
+/* project i v1.0.11 | (c) 2019 Nan Hang Lim (@nanhanglim)  */
 
 function getCurateParameter() {
   var params = new URLSearchParams(document.location.search.substring(1));
@@ -50,6 +50,24 @@ function getBYC() {
 }
 
 function getAFT() {
+  if (document.getElementById("aftBeads").checked == true) {
+    document.getElementById("beadsLettering").required = true;
+    var beadsLettering = document.getElementById("beadsLettering").value;
+    localStorage.setItem('beadsLettering', beadsLettering);
+  } else {
+    document.getElementById("beadsLettering").required = false;
+}
+
+if (document.getElementById("aftBeads").checked == true && document.getElementByID("beadsLettering").value !== "") {
+  aftCheck();
+} else if (document.getElementById("aftBeads").checked == false) {
+  aftCheck();
+} else {
+  return false; 
+}
+}
+
+function aftCheck() {
   if (document.getElementById("aftLIS").checked == false && document.getElementById("aftHALD").checked == false && document.getElementById("aftHV").checked == false && document.getElementById("aftTAARTS").checked == false && document.getElementById("aftIYB").checked == false && document.getElementById("aftBon").checked == false && document.getElementById("aftTY").checked == false) {
     document.getElementById('cardSelectText').style.display = "block";
   } else if (document.getElementById("aftLIS").checked == true) {
@@ -73,24 +91,15 @@ function getAFT() {
     document.getElementById('lookSelectText').style.display = "block";
   } else if (document.getElementById("aftRustic").checked == true) {
     localStorage.setItem('aftLook', "Rustic");
+    aftReplace();
   } else if (document.getElementById("aftClassic").checked == true) {
     localStorage.setItem('aftLook', "Classic");
+    aftReplace();
   }
-  if (document.getElementById("aftBeads").checked == true) {
-    document.getElementById("beadsLettering").required = true;
-    var beadsLettering = document.getElementById("beadsLettering").value;
-    localStorage.setItem('beadsLettering', beadsLettering);
-  } else {
-    document.getElementById("beadsLettering").required = false;
 }
 
-if (document.getElementById("aftBeads").checked == true && document.getElementByID("beadsLettering").value !== "") {
+function aftReplace() {
   location.replace("/curate-5");
-} else if (document.getElementById("aftBeads").checked == false) {
-  location.replace("/curate-5");
-} else {
-  return false; 
-}
 }
   
 
