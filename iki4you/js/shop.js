@@ -1,4 +1,4 @@
-/* project i v1.0.9 | (c) 2019 Nan Hang Lim (@nanhanglim)  */
+/* project i v1.0.10 | (c) 2019 Nan Hang Lim (@nanhanglim)  */
 
 function getCurateParameter() {
   var params = new URLSearchParams(document.location.search.substring(1));
@@ -83,14 +83,15 @@ function getAFT() {
   } else {
     document.getElementById("beadsLettering").required = false;
 }
-}
 
 if (document.getElementById("aftBeads").checked == true && document.getElementByID("beadsLettering").value !== "") {
   location.replace("/curate-5");
 } else if (document.getElementById("aftBeads").checked == false) {
   location.replace("/curate-5");
 } else {
-  return false;
+  return false; 
+}
+}
   
 
 function beadsChecked() {
