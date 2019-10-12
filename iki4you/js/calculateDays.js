@@ -25,6 +25,6 @@ function calcBusinessDays(dDate1, dDate2) { // input given as Date objects
   return (iDateDiff + 1); // add 1 because dates are inclusive
 }
 
-var date1 = new Date("October 17, 2019");
-var date2 = new Date("October 22, 2019");
+var date1 = new Date(localStorage.getItem('currentDateUS'));
+var date2 = new Date(localStorage.getItem('bycDDateUS'));
 alert(calcBusinessDays(date1, date2));
