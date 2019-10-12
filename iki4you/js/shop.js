@@ -85,6 +85,7 @@ function getAFT() {
   } else {
     document.getElementById("beadsLettering").required = false;
 }
+}
 
 function beadsChecked() {
   if (document.getElementById("aftBeads").checked == true) {
