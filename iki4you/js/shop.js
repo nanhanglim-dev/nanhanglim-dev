@@ -1,4 +1,4 @@
-/* project i v1.0.8 | (c) 2019 Nan Hang Lim (@nanhanglim)  */
+/* project i v1.0.9 | (c) 2019 Nan Hang Lim (@nanhanglim)  */
 
 function getCurateParameter() {
   var params = new URLSearchParams(document.location.search.substring(1));
@@ -73,10 +73,8 @@ function getAFT() {
     document.getElementById('lookSelectText').style.display = "block";
   } else if (document.getElementById("aftRustic").checked == true) {
     localStorage.setItem('aftLook', "Rustic");
-    location.replace("/curate-5");
   } else {
     localStorage.setItem('aftLook', "Classic");
-    location.replace("/curate-5");
   }
   if (document.getElementById("aftBeads").checked == true) {
     document.getElementById("beadsLettering").required = true;
@@ -84,6 +82,7 @@ function getAFT() {
     localStorage.setItem('beadsLettering', beadsLettering);
   } else {
     document.getElementById("beadsLettering").required = false;
+    location.replace("/curate-5");
 }
 }
 
