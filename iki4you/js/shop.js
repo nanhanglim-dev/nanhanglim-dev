@@ -54,7 +54,7 @@ function seeDate() {
 }
 
 function showExpress() {
-  if (document.getElementById("bycDDate").value == localStorage.getItem('sevenWorkingDays') || localStorage.getItem('eightWorkingDays') || localStorage.getItem('nineWorkingDays')) {
+  if (document.getElementById("bycDDate").value == localStorage.getItem('sevenWorkingDays') || document.getElementById("bycDDate").value == localStorage.getItem('eightWorkingDays') || document.getElementById("bycDDate").value == localStorage.getItem('nineWorkingDays')) {
   document.getElementById("showExpress").style.display = "block";
 } else {
   document.getElementById("showExpress").style.display = "none";
