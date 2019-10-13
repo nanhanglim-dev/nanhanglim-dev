@@ -49,10 +49,6 @@ function getBYC() {
   }
 }
 
-function seeDate() {
-  document.getElementById("bycDDate").addEventListener("onchange", showExpress);
-}
-
 function showExpress() {
   if (document.getElementById("bycDDate").value == localStorage.getItem('sevenWorkingDays') || document.getElementById("bycDDate").value == localStorage.getItem('eightWorkingDays') || document.getElementById("bycDDate").value == localStorage.getItem('nineWorkingDays')) {
   document.getElementById("showExpress").style.display = "block";
