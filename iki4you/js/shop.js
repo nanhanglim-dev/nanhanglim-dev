@@ -144,6 +144,7 @@ function curateASurpriseIkiBox() {
   if (document.getElementById("look") !== "" && localStorage.getItem('addedCart') == null) {
     document.querySelector('button[type="submit"]').click();
   }
+  localStorage.setItem('addedCart', '1')
 }
 function offBST() {
   document.getElementById("boxSelectText").style.display = "none";
