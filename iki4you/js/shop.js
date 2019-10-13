@@ -1,4 +1,4 @@
-/* project i v1.0.11 | (c) 2019 Nan Hang Lim (@nanhanglim)  */
+/* project i v1.0.12 | (c) 2019 Nan Hang Lim (@nanhanglim)  */
 
 function getCurateParameter() {
   var params = new URLSearchParams(document.location.search.substring(1));
@@ -47,6 +47,18 @@ function getBYC() {
     localStorage.setItem('bycTime', "6PM-10PM");
     location.replace("/curate-4");
   }
+}
+
+function seeDate() {
+  document.getElementById("bycDDate").addEventListener("onchange", showExpress);
+}
+
+function showExpress() {
+  if (document.getElementById("bycDDate").value == localStorage.getItem('sevenWorkingDays') || localStorage.getItem('eightWorkingDays') || localStorage.getItem('nineWorkingDays')) {
+  document.getElementById("showExpress").style.display = "block";
+} else {
+  document.getElementById("showExpress").style.display = "none";
+}
 }
 
 function getAFT() {
