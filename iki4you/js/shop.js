@@ -1,4 +1,4 @@
-/* project i v1.0.12 | (c) 2019 Nan Hang Lim (@nanhanglim)  */
+/* project i v1.0.13 | (c) 2019 Nan Hang Lim (@nanhanglim)  */
 
 function getCurateParameter() {
   var params = new URLSearchParams(document.location.search.substring(1));
