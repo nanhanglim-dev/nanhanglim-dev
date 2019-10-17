@@ -1,4 +1,4 @@
-/* project i v1.0.13 | (c) 2019 Nan Hang Lim (@nanhanglim)  */
+/* project i v1.0.14 | (c) 2019 Nan Hang Lim (@nanhanglim)  */
 
 function getCurateParameter() {
   var params = new URLSearchParams(document.location.search.substring(1));
@@ -143,8 +143,8 @@ function curateASurpriseIkiBox() {
   document.getElementById("beadstext").value = localStorage.getItem('beadsLettering');
   if (document.getElementById("look") !== "" && localStorage.getItem('addedCart') == null) {
     document.querySelector('button[type="submit"]').click();
+    localStorage.setItem('addedCart', '1')
   }
-  localStorage.setItem('addedCart', '1')
 }
 function offBST() {
   document.getElementById("boxSelectText").style.display = "none";
