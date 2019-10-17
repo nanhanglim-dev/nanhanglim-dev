@@ -142,6 +142,7 @@ function curateASurpriseIkiBox() {
   document.getElementById("look").value = localStorage.getItem('aftLook');
   document.getElementById("beadstext").value = localStorage.getItem('beadsLettering');
   if (document.getElementById("look") !== "" && localStorage.getItem('addedCart') == null) {
+    console.log("pressed");
     document.querySelector('button[type="submit"]').click();
     localStorage.setItem('addedCart', '1')
   }
