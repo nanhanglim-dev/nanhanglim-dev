@@ -233,7 +233,7 @@ function aftEdit() {
   }
 }
 
-function getEditBYC() {
+function getEditAFT() {
   if (document.getElementById("aftBeads").checked == true) {
     document.getElementById("beadsLettering").required = true;
     var beadsLettering = document.getElementById("beadsLettering").value;
