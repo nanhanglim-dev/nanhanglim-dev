@@ -167,7 +167,7 @@ function pmuEdit() {
   var parameter = params.get("edit");
   if (parameter == 'true') {
   document.getElementById('pmuNext').innerHTML = 'Edit';  
-  document.getElementById('pmuNext').onclick = 'getEditPMU()';
+  document.getElementById('pmuNext').setAttribute('onClick', 'getEditPMU()');
   }
 }
 
