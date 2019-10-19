@@ -165,9 +165,11 @@ function offLST() {
 function pmuEdit() {
   var params = new URLSearchParams(document.location.search.substring(1));
   var parameter = params.get("edit");
-  if (parameter == "true") {
-    document.getElementById('pmuNext').innerHTML = 'Edit';
-    if (document.getElementById("pmuPetite").checked == false && document.getElementById("pmuRegular").checked == false && document.getElementById("pmuDeluxe").checked == false) {
+  document.getElementById('pmuNext').onclick = 'getEditPMU()';
+}
+
+function getEditPMU() {
+  if (document.getElementById("pmuPetite").checked == false && document.getElementById("pmuRegular").checked == false && document.getElementById("pmuDeluxe").checked == false) {
     document.getElementById('boxSelectText').style.display = "block";
   } else if (document.getElementById("pmuPetite").checked == true) {
     localStorage.setItem('pickMeUp', "Petite");
@@ -178,6 +180,5 @@ function pmuEdit() {
   } else if (document.getElementById("pmuDeluxe").checked == true) {
     localStorage.setItem('pickMeUp', "Deluxe");
     location.replace("/curate-5");
-  }
   }
 }
