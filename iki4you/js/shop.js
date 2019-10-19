@@ -1,4 +1,4 @@
-/* project i v1.0.15 | (c) 2019 Nan Hang Lim (@nanhanglim)  */
+/* project i v1.0.16 | (c) 2019 Nan Hang Lim (@nanhanglim)  */
 
 function getCurateParameter() {
   var params = new URLSearchParams(document.location.search.substring(1));
@@ -220,5 +220,64 @@ function getEditBYC() {
   } else {
     localStorage.setItem('bycTime', "6PM-10PM");
     location.replace("/curate-5");
+  }
+}
+
+
+function aftEdit() {
+  var params = new URLSearchParams(document.location.search.substring(1));
+  var parameter = params.get("edit");
+  if (parameter == 'true') {
+  document.getElementById('aftNext').value = 'Edit';  
+  document.getElementById('aftNext').setAttribute('onClick', 'getEditAFT()');
+  }
+}
+
+function getEditBYC() {
+  if (document.getElementById("aftBeads").checked == true) {
+    document.getElementById("beadsLettering").required = true;
+    var beadsLettering = document.getElementById("beadsLettering").value;
+    localStorage.setItem('beadsLettering', beadsLettering);
+  } else {
+    document.getElementById("beadsLettering").required = false;
+}
+
+if (document.getElementById("aftBeads").checked == true && document.getElementById("beadsLettering").value !== "") {
+  aftEditCheck();
+} else if (document.getElementById("aftBeads").checked == false) {
+  aftEditCheck();
+} else {
+  return false; 
+}
+}
+
+function aftEditCheck() {
+  if (document.getElementById("aftLIS").checked == false && document.getElementById("aftHALD").checked == false && document.getElementById("aftHV").checked == false && document.getElementById("aftTAARTS").checked == false && document.getElementById("aftIYB").checked == false && document.getElementById("aftBon").checked == false && document.getElementById("aftTY").checked == false) {
+    document.getElementById('cardSelectText').style.display = "block";
+  } else if (document.getElementById("aftLIS").checked == true) {
+    localStorage.setItem('aftDesign', "Let it sparkle");
+  } else if (document.getElementById("aftHALD").checked == true) {
+    localStorage.setItem('aftDesign', "Have a lovely day");
+  } else if (document.getElementById("aftHV").checked == true) {
+    localStorage.setItem('aftDesign', "Happy vibes");
+  } else if (document.getElementById("aftTAARTS").checked == true) {
+    localStorage.setItem('aftDesign', "There\'s always a reason to smile");
+  } else if (document.getElementById("aftIYB").checked == true) {
+    localStorage.setItem('aftDesign', "It\'s your birthday");
+  } else if (document.getElementById("aftBon").checked == true) {
+    localStorage.setItem('aftDesign', "Bonjour");
+  } else {
+    localStorage.setItem('aftDesign', "Thank you");
+  }
+  var aftMessage = document.getElementById("aftMessage").value
+  localStorage.setItem('aftMessage', aftMessage);
+  if (document.getElementById("aftRustic").checked == false && document.getElementById("aftClassic").checked == false) {
+    document.getElementById('lookSelectText').style.display = "block";
+  } else if (document.getElementById("aftRustic").checked == true) {
+    localStorage.setItem('aftLook', "Rustic");
+    location.replace(/curate-5);
+  } else if (document.getElementById("aftClassic").checked == true) {
+    localStorage.setItem('aftLook', "Classic");
+    location.replace(/curate-5);
   }
 }
