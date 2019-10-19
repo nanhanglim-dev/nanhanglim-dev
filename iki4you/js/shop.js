@@ -167,6 +167,17 @@ function pmuEdit() {
   var parameter = params.get("edit");
   if (parameter == "true") {
     document.getElementById('pmuNext').innerHTML = 'Edit';
-    document.getElementById('pmuNext').href = '/curate-5';
+    if (document.getElementById("pmuPetite").checked == false && document.getElementById("pmuRegular").checked == false && document.getElementById("pmuDeluxe").checked == false) {
+    document.getElementById('boxSelectText').style.display = "block";
+  } else if (document.getElementById("pmuPetite").checked == true) {
+    localStorage.setItem('pickMeUp', "Petite");
+    location.replace("/curate-5");
+  } else if (document.getElementById("pmuRegular").checked == true) {
+    localStorage.setItem('pickMeUp', "Regular");
+    location.replace("/curate-5");
+  } else if (document.getElementById("pmuDeluxe").checked == true) {
+    localStorage.setItem('pickMeUp', "Deluxe");
+    location.replace("/curate-5");
+  }
   }
 }
