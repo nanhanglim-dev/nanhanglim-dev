@@ -168,3 +168,5 @@ function pmuEdit() {
   if (parameter == "true") {
     document.getElementById('pmuNext').innerHTML = 'Edit';
     document.getElementById('pmuNext').href = '/curate-5';
+  }
+}
