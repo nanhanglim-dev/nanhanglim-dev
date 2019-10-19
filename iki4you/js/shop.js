@@ -142,11 +142,11 @@ function curateASurpriseIkiBox() {
   document.getElementById("look").value = localStorage.getItem('aftLook');
   document.getElementById("beadstext").value = localStorage.getItem('beadsLettering');
   console.log("B4 if");
-  console.log(document.getElementById("look"));
-  console.log(localStorage.getItem('addedCart'));
-  if (document.getElementById("look") !== "" && localStorage.getItem('addedCart') == null) {
-    console.log("Aft if");
-    console.log(document.getElementById("look"));
+  console.log("look value" + document.getElementById("look").value);
+  console.log("addedCart value" + localStorage.getItem('addedCart'));
+  if (document.getElementById("look").value !== "" && localStorage.getItem('addedCart') == null) {
+    console.log("look value" + document.getElementById("look").value);
+    console.log("addedCart value" + localStorage.getItem('addedCart'));
     console.log(localStorage.getItem('addedCart'));
     document.querySelector('button[type="submit"]').click();
     localStorage.setItem('addedCart', '1')
