@@ -190,7 +190,7 @@ function bycEdit() {
   var params = new URLSearchParams(document.location.search.substring(1));
   var parameter = params.get("edit");
   if (parameter == 'true') {
-  document.getElementById('bycNext').innerHTML = 'Edit';  
+  document.getElementById('bycNext').value = 'Edit';  
   document.getElementById('bycNext').setAttribute('onClick', 'getEditBYC()');
   }
 }
