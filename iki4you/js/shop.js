@@ -165,7 +165,10 @@ function offLST() {
 function pmuEdit() {
   var params = new URLSearchParams(document.location.search.substring(1));
   var parameter = params.get("edit");
+  if (parameter == 'true') {
+  document.getElementById('pmuNext').innerHTML = 'Edit';  
   document.getElementById('pmuNext').onclick = 'getEditPMU()';
+  }
 }
 
 function getEditPMU() {
