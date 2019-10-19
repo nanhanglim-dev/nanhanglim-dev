@@ -161,3 +161,10 @@ function offCST() {
 function offLST() {
   document.getElementById("lookSelectText").style.display = "none";
 }
+
+function pmuEdit() {
+  var params = new URLSearchParams(document.location.search.substring(1));
+  var parameter = params.get("edit");
+  if (parameter == "true") {
+    document.getElementById('pmuNext').innerHTML = 'Edit';
+    document.getElementById('pmuNext').href = '/curate-5';
