@@ -275,9 +275,9 @@ function aftEditCheck() {
     document.getElementById('lookSelectText').style.display = "block";
   } else if (document.getElementById("aftRustic").checked == true) {
     localStorage.setItem('aftLook', "Rustic");
-    location.replace(/curate-5);
+    location.replace('/curate-5');
   } else if (document.getElementById("aftClassic").checked == true) {
     localStorage.setItem('aftLook', "Classic");
-    location.replace(/curate-5);
+    location.replace('/curate-5');
   }
 }
