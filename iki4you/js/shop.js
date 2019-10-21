@@ -21,22 +21,36 @@ function getPMU() {
   }
 }
 
-function getBYC() {
+function checkBYC() {
+  var params = new URLSearchParams(document.location.search.substring(1));
+  var parameter = params.get("edit");
   var bycName = document.getElementById("bycRName").value;
-  localStorage.setItem('bycName', bycName);
   var bycAbout = document.getElementById("bycAbout").value;
-  localStorage.setItem('bycAbout', bycAbout);
   var bycRTel = document.getElementById("bycRTel").value;
-  localStorage.setItem('bycRTel', bycRTel);
   var bycAddress1 = document.getElementById("bycAddress1").value;
-  localStorage.setItem('bycAddress1', bycAddress1);
   var bycAddress2 = document.getElementById("bycAddress2").value;
-  localStorage.setItem('bycAddress2', bycAddress2);
   var bycCountry = document.getElementById("bycCountry").value;
-  localStorage.setItem('bycCountry', bycCountry);
   var bycPostcode = document.getElementById("bycPostcode").value;
-  localStorage.setItem('bycPostcode', bycPostcode);
   var bycDDate = document.getElementById("bycDDate").value;
+  if (bycName == "" || bycAbout == "" || bycRTel == "" || bycAddress1 == "" || bycCountry == "" || bycPostcode == "" || bycDDate == "")) {
+    1 == 1;
+  } else {
+    if (parameter !== 'true') {
+    getBYC(bycName, bycAbout, bycRTel, bycAddress1, bycAddress2, bycCountry, bycPostcode, bycDDate);
+  } else {
+    getEditBYC(bycName, bycAbout, bycRTel, bycAddress1, bycAddress2, bycCountry, bycPostcode, bycDDate);
+  }
+  }
+}
+
+function getBYC(bycName, bycAbout, bycRTel, bycAddress1, bycAddress2, bycCountry, bycPostcode, bycDDate) {
+  localStorage.setItem('bycName', bycName);
+  localStorage.setItem('bycAbout', bycAbout);
+  localStorage.setItem('bycRTel', bycRTel);
+  localStorage.setItem('bycAddress1', bycAddress1);
+  localStorage.setItem('bycAddress2', bycAddress2);
+  localStorage.setItem('bycCountry', bycCountry);
+  localStorage.setItem('bycPostcode', bycPostcode);
   localStorage.setItem('bycDDate', bycDDate);
   if (document.getElementById("byc10AM6PM").checked == false && document.getElementById("byc6PM10PM").checked == false) {
     document.getElementById('timeSelectText').style.display = "block";
@@ -196,21 +210,13 @@ function bycEdit() {
 }
 
 function getEditBYC() {
-  var bycName = document.getElementById("bycRName").value;
   localStorage.setItem('bycName', bycName);
-  var bycAbout = document.getElementById("bycAbout").value;
   localStorage.setItem('bycAbout', bycAbout);
-  var bycRTel = document.getElementById("bycRTel").value;
   localStorage.setItem('bycRTel', bycRTel);
-  var bycAddress1 = document.getElementById("bycAddress1").value;
   localStorage.setItem('bycAddress1', bycAddress1);
-  var bycAddress2 = document.getElementById("bycAddress2").value;
   localStorage.setItem('bycAddress2', bycAddress2);
-  var bycCountry = document.getElementById("bycCountry").value;
   localStorage.setItem('bycCountry', bycCountry);
-  var bycPostcode = document.getElementById("bycPostcode").value;
   localStorage.setItem('bycPostcode', bycPostcode);
-  var bycDDate = document.getElementById("bycDDate").value;
   localStorage.setItem('bycDDate', bycDDate);
   if (document.getElementById("byc10AM6PM").checked == false && document.getElementById("byc6PM10PM").checked == false) {
     document.getElementById('timeSelectText').style.display = "block";
@@ -222,7 +228,6 @@ function getEditBYC() {
     location.replace("/curate-5");
   }
 }
-
 
 function aftEdit() {
   var params = new URLSearchParams(document.location.search.substring(1));
