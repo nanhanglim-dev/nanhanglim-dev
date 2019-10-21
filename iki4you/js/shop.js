@@ -1,4 +1,5 @@
 /* project i v1.0.16 | (c) 2019 Nan Hang Lim (@nanhanglim)  */
+/* licence: https://licence.nanhanglim.com/project_i */
 
 function getCurateParameter() {
   var params = new URLSearchParams(document.location.search.substring(1));
@@ -205,7 +206,7 @@ function bycEdit() {
   var parameter = params.get("edit");
   if (parameter == 'true') {
   document.getElementById('bycNext').value = 'Edit';  
-  document.getElementById('bycNext').setAttribute('onClick', 'getEditBYC()');
+  document.getElementById('bycNext').setAttribute('onClick', 'checkBYC()');
   }
 }
 
