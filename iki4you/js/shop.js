@@ -1,4 +1,4 @@
-/* project i v1.0.16 | (c) 2019 Nan Hang Lim (@nanhanglim)  */
+/* project i v1.0.18 | (c) 2019 Nan Hang Lim (@nanhanglim)  */
 /* licence: https://licence.nanhanglim.com/project_i */
 
 function getCurateParameter() {
@@ -33,7 +33,7 @@ function checkBYC() {
   var bycCountry = document.getElementById("bycCountry").value;
   var bycPostcode = document.getElementById("bycPostcode").value;
   var bycDDate = document.getElementById("bycDDate").value;
-  if (bycName == "" || bycAbout == "" || bycRTel == "" || bycAddress1 == "" || bycCountry == "" || bycPostcode == "" || bycDDate == "")) {
+  if (bycName == "" || bycAbout == "" || bycRTel == "" || bycAddress1 == "" || bycCountry == "" || bycPostcode == "" || bycDDate == "") {
     1 == 1;
   } else {
     if (parameter !== 'true') {
