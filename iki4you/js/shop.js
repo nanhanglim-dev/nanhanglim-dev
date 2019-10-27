@@ -122,7 +122,11 @@ function aftCheck() {
 }
 
 function aftReplace() {
+  if (document.getElementById('aftMessage').value !== "" || document.getElementById('aftMessage').value !== "") {
   location.replace("/curate-5");
+} else {
+  1 == 1;
+}
 }
   
 
