@@ -148,6 +148,7 @@ function curateASurpriseIkiBox() {
   }
   document.getElementById("letscelebrate").value = localStorage.getItem('letsCelebrate');
   document.getElementById("recipientname").value = localStorage.getItem('bycName');
+  document.getElementById("aboutrecipient").value = localStorage.getItem('bycAbout');
   document.getElementById("recipientphone").value = localStorage.getItem('bycRTel');
   document.getElementById("addressline1").value = localStorage.getItem('bycAddress1');
   document.getElementById("addressline2").value = localStorage.getItem('bycAddress2');
